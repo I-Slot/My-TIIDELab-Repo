@@ -33,3 +33,12 @@ console.log(stringsOfLetters);
 // In C++ which have static Arrays you do something like this
 // int a[20]; // An Array which have 20 items
 // int b[5] {1,2,3,4,5}; // An Array which have 20 items
+
+let arr = new Array(100).fill("ismail");
+console.log(arr);
+
+// let a = 5;
+// let b = 2;
+
+// console.log(++a);
+// console.log(b++);
