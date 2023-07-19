@@ -11,18 +11,26 @@
     />
     <style>
       * {
+        /* 
+        -May want to add "border-box for "box-sizing so padding does not affect width
+        -Reset margin and padding 
+       */
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
 
       body {
-        background: #344a72;
-        font-family: "Raleway", sans-serif;
-        line-height: 1.8aaaaaaa;
+        /* 
+          -Background color is #344a72
+        */
+        background-color: #344a72;
       }
 
       a {
+        /* 
+        Underlined links are ugly :)
+       */
         text-decoration: none;
       }
 
@@ -32,8 +40,8 @@
         -I would also set a "max-width" for responsiveness
         -May want to add some padding
         */
-        max-width: 400px;
         margin: 20px auto;
+        max-width: 400px;
         padding: 15px;
       }
 
@@ -41,19 +49,18 @@
         /* 
           This is the white area around the form and heading, etc
         */
-        background: white;
+        background-color: white;
         padding: 15px 25px;
         border-radius: 10px;
       }
 
       .form-wrap h1,
       .form-wrap p {
+        /* 
+          May want to center these
+        */
         text-align: center;
-      }
-
-      #prompt {
-        margin-bottom: 20px;
-        margin-top: 5px;
+        line-height: 1.6em;
       }
 
       .form-wrap .form-group {
@@ -64,6 +71,9 @@
       }
 
       .form-wrap .form-group label {
+        /* 
+          Label should be turned into a block element
+        */
         color: grey;
         display: block;
         margin-bottom: 5px;
@@ -98,7 +108,7 @@
         /* 
           Hover background color for button is #37a08e
         */
-        background: #37a08e;
+        background-color: #37a08e;
         cursor: pointer;
       }
 
@@ -106,6 +116,7 @@
         /* 
           Bottom text is smaller
         */
+        /* font-size: 10px; */
         font-size: 0.8em;
       }
 
@@ -113,10 +124,8 @@
         /* 
         Should be centered
        */
-        max-width: 400px;
-        margin: 15px auto;
+
         text-align: center;
-        color: white;
       }
 
       footer a {
@@ -131,7 +140,7 @@
     <div id="container">
       <div class="form-wrap">
         <h1>Sign Up</h1>
-        <p id="prompt">It's free and only takes a minute</p>
+        <p>It's free and only takes a minute</p>
         <form>
           <div class="form-group">
             <label for="first-name">First Name</label>
@@ -155,7 +164,7 @@
           </div>
           <button type="submit" class="btn">Sign Up</button>
           <p class="bottom-text">
-            By clicking the Sign Up button, you agree to our <br />
+            By clicking the Sign Up button, you agree to our
             <a href="#">Terms & Conditions</a> and
             <a href="#">Privacy Policy</a>
           </p>
