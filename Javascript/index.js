@@ -140,7 +140,21 @@ let profession = "Engineer";
 
 // prompt, alert, confirm
 
-let userName = prompt("Please what your name?");
-let exp = `Welcome ${userName}!`;
-let exps = exp;
-alert(exps);
+// let userName = prompt("Please what your name?");
+// let exp = `Welcome ${userName}!`;
+// let exps = exp;
+// alert(exps);
+
+//Null
+
+let tjName; // undefined
+let tjName2 = null;
+
+let num2 = 100;
+
+console.log("The type of num2 :" + typeof num2);
+
+console.log(typeof tjName);
+console.log(typeof tjName2);
+
+console.log(tjName * num2);
