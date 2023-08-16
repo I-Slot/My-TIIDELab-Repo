@@ -1,0 +1,18 @@
+<script>
+  let code = prompt("Enter your code");
+  if (code == "*901*") {
+    let message = +prompt(
+      "Welcome to USSD Banking. PLease note a N6.98 network\n charge will be applied to your account for banking services\n on this channel.\n 1. Accept \n 2. Cancel"
+    );
+    if (message == 1) {
+      let option = +prompt(
+        "Access Bank \n 1>Check balance \n 2>Transfer \n 3>Airtime \n 4>Buy Data \n 5>Pay Bills \n 6>Enquiry Service \n 7>Diamond Xtra \n 8>AccessPay \n 0>Next page "
+      );
+      if (message == 1) {
+        let balanceMessage = +prompt(
+          "Create or Change PIN \n 1>I have ATM card \n 2>No ATM card"
+        );
+      }
+    }
+  }
+</script>

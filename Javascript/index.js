@@ -158,3 +158,16 @@ console.log(typeof tjName);
 console.log(typeof tjName2);
 
 console.log(tjName * num2);
+
+// Day 3
+
+// Symbol: It's one of the ES6 features
+/*
+ it can be used for constant
+
+ */
+
+let userId1 = symbol("Unique", { contact: true });
+// let userId2 = symbol();
+
+console.log(userId1);
