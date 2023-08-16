@@ -27,14 +27,31 @@
         let payBills = +prompt(
           "Select biller \n 1. DSTV \n 2. GOTV \n 3. LCC \n 4. Data Purchase \n 5. Bet Naija \n 6. Other billers"
         );
+        if (payBills == 1) {
+          let selectOptionDSTV = +prompt(
+            "Select option \n 1> ASIA STANDALONE FOR N8300 \n 2> COMPACT FOR N10500 \n 3>Next Page"
+          );
+        } else if (payBills == 2) {
+          let selectOptionGOTV = +prompt(
+            "Select option \n 1>GOTV SMALLIE MONTHLY FOR N1100 \n 2>GOTV SMALLIE QUALITY FOR N2900 \n 3>Next page"
+          );
+        }
       } else if (option == 6) {
         let enquiryService = +prompt(
           "Access Bank Enquiry Services \n 1. Mini Statement \n 2. BVN Enquiry \n 3. A/C No Enquiry"
         );
+        if (enquiryService == 1) {
+          alert("Please open an account by dialing *901#");
+        }
       } else if (option == 7) {
         let diamondXtra = +prompt(
           "Welcome to Access Bank \n 1. Open a Diamond Xtra Account \n 2. View Prizes \n 3. Qualifying Criteria \n 4. View Ticket"
         );
+        if (diamondXtra == 1) {
+          let openDiamondXtra = +prompt(
+            "Open a Diamond Xtra Account \n 1>Open Account with BVN \n 2>Open Account without BVN"
+          );
+        }
       } else if (option == 8) {
         let accessPay = alert(
           "Dear Customer, we could not successfully \n complete your request at this time. please retry"
