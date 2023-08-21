@@ -59,7 +59,19 @@ while(condition)
 
 let b = 19;
 do {
-  b *= 2;
-  console.log("");
-  b;
+  //   b *= 2;
+  //   console.log(b);
+  b++;
 } while (b <= 25);
+
+//3. for loop
+/*
+syntax
+for(initialization ; condition; operation){
+  action
+}
+ */
+
+for (f = 4; f < 10; f++) {
+  console.log(f);
+}
