@@ -12,4 +12,19 @@
       console.log(i);
     }
   }
+
+  /*
+Function `printEven()` prints all the even numbers of a 2D array using for loops and ‘%’ operator.
+*/
+
+  let numList = [13, 23, 12, 45, 22, 48, 66, 100];
+  function printEven(arr) {
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 == 0) {
+        console.log(arr[i]);
+      }
+    }
+  }
+
+  printEven(numList);
 </script>

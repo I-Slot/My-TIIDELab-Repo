@@ -16,8 +16,8 @@
 // Expression
 // Statement : A statement should be terminated when ever is declared.
 
-let firstName = "Ismail";
-console.log(firstName);
+// let firstName = "Ismail";
+// console.log(firstName);
 // The console is a debugging tool for developers
 // The console are of 2 types (1)Terminal console And (2) Browser console
 // The terminal console is used when javascript code is run in the node environment
@@ -71,16 +71,16 @@ DAY 2
  e.g array = [1,2,3,4,5,6,7,8,9]
  */
 
-console.log(Number.MAX_SAFE_INTEGER);
+// console.log(Number.MAX_SAFE_INTEGER);
 
 let age = null;
-console.log(age);
+// console.log(age);
 
 let year;
-console.log(year);
+// console.log(year);
 
 let something = "";
-console.log(something.length);
+// console.log(something.length);
 
 // Object example
 
@@ -92,7 +92,7 @@ let fellow = {
   gender: "male",
 };
 
-console.log(fellow.educationLevel);
+// console.log(fellow.educationLevel);
 
 let me = null;
 let number = 4;
@@ -100,8 +100,8 @@ let number = 4;
 let und = undefined;
 
 let result = me * number;
-console.log(result);
-console.log(typeof me);
+// console.log(result);
+// console.log(typeof me);
 
 //Operators Unary operators && Binary Operator
 /*
@@ -152,12 +152,12 @@ let tjName2 = null;
 
 let num2 = 100;
 
-console.log("The type of num2 :" + typeof num2);
+// console.log("The type of num2 :" + typeof num2);
 
-console.log(typeof tjName);
-console.log(typeof tjName2);
+// console.log(typeof tjName);
+// console.log(typeof tjName2);
 
-console.log(tjName * num2);
+// console.log(tjName * num2);
 
 // Day 3
 
@@ -167,7 +167,19 @@ console.log(tjName * num2);
 
  */
 
-let userId1 = symbol("Unique", { contact: true });
+// let userId1 = symbol("Unique", { contact: true });
 // let userId2 = symbol();
 
-console.log(userId1);
+// console.log(userId1);
+
+// Function
+
+let currencyOne = 100;
+let currencyTwo = 0;
+let exchangeRate = 1.2;
+
+function convertCurrency(amount, rate) {
+  return amount * rate;
+}
+
+console.log(convertCurrency(currencyOne, exchangeRate));

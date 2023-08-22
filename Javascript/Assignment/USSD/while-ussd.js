@@ -112,6 +112,7 @@ if (code === "*901#") {
       }
     }
   }
-} else {
-  alert("Code is not correct.");
 }
+//  else {
+//   alert("Code is not correct.");
+// }
