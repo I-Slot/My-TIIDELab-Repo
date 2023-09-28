@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .blueTheme {
+        background-color: blue;
+        color: white;
+        width: 800px;
+        margin: auto;
+      }
+
+      table,
+      thead,
+      td {
+        border: 2px solid white;
+      }
+
+      .redTheme {
+        background-color: red;
+        color: white;
+        width: 800px;
+        margin: auto;
+        /* border: 2px solid blue; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Inventory Items</h1>
+
+    <form action="">
+      <input type="text" placeholder="Item Name" /> <br />
+      <br />
+      <input type="text" placeholder="Description" /> <br />
+      <br />
+      <input type="text" placeholder="Amount" /> <br />
+      <br />
+      <input type="text" placeholder="Quantity" /> <br />
+      <br />
+      <input type="submit" />
+    </form>
+    <select name="" id="themes">
+      <option value="">Select Theme</option>
+      <option value="Blue">Blue</option>
+      <option value="Red">Red</option>
+    </select>
+    <button onclick="applyTheme()">Change Theme</button>
+
+    <table id="inventory">
+      <thead>
+        <th>Items Name</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Quantity</th>
+      </thead>
+    </table>
+
+    <script>
+      let inventoryItems = document.getElementById("inventory");
+      inventoryItems.setAttribute("class", "blueTheme");
+
+      function applyTheme() {
+        // Get the table
+        let inventoryItems = document.getElementById("inventory");
+
+        // Get the selected theme
+        let selectedTheme = document.getElementById("themes");
+        if (selectedTheme.value == "Blue") {
+          inventoryItems.setAttribute("class", "blueTheme");
+        } else inventoryItems.setAttribute("class", "redTheme");
+      }
+    </script>
+
+    <!-- let inputColor = document.getElementById("themes");
+      //   let inputRange = document.getElementById("range").value;
+      //   alert(inputRange.value);
+      let inventoryItems = document.getElementById("inventory");
+      //   inventoryItems.setAttribute("class", "blueTheme");
+
+      function applyTheme() {
+        let selectedTheme = document.getElementById("themes");
+        if (selectedTheme.value) {
+          //   alert(inputColor.value);
+          inventoryItems.style.backgroundColor = inputColor.value;
+          inventoryItems.style.color = "white";
+          inventoryItems.style.width = "800px";
+          //   inventoryItems.setAttribute("class", `${inputColor}`);
+        }
+        // else {
+        //   inventoryItems.setAttribute("class", "redTheme");
+        // }
+
+        // alert(selectedTheme.value);
+      } -->
+  </body>
+</html>

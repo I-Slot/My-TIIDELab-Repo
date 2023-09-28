@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Entry Project</title>
+    <style>
+      div {
+        display: grid;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+      }
+
+      div > h1 {
+        text-align: center;
+      }
+
+      .select {
+        display: inline;
+        margin-bottom: 50px;
+      }
+
+      form {
+        /* display: grid; */
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+      }
+
+      form > input {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: left;
+      }
+      .blueTheme {
+        background-color: blue;
+        color: white;
+        /* max-width: 80%;
+        margin: auto;
+        */
+      }
+
+      .redTheme {
+        background-color: red;
+        color: white;
+        /* width: 800px;
+        margin: auto; */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Inventory Items</h1>
+
+      <form action="" onsubmit="addItem(event)" name="inventory-form">
+        <input
+          type="text"
+          id="item-name"
+          name="item-name"
+          placeholder="Item Name"
+          required
+        />
+        <input
+          type="text"
+          id="item-discript"
+          name="item-discript"
+          placeholder="Description"
+          required
+        />
+        <input
+          type="text"
+          id="item-amount"
+          name="item-amount"
+          placeholder="Amount"
+          required
+        />
+        <input
+          type="number"
+          id="item-quantity"
+          name="item-quantity"
+          placeholder="Quantity"
+          required
+        />
+        <button>Submit</button>
+      </form>
+
+      <!-- <form action="">
+        <input type="text" />
+      </form> -->
+
+      <div class="select">
+        <select name="" id="themes">
+          <option>Select Theme</option>
+          <option>Blue</option>
+          <option>Red</option>
+        </select>
+        <button onclick="applyTheme()">Change Theme</button>
+      </div>
+
+      <table id="inventory">
+        <thead>
+          <th>Item Name</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Quantity</th>
+        </thead>
+      </table>
+    </div>
+
+    <script>
+      let inventoryItems = document.getElementById("inventory");
+
+      function addItem(e) {
+        e.preventDefault();
+        document.forms;
+        let inventoryForm = document.forms["inventory-form"];
+
+        // Gat each element by ID
+        let inventoryName = document.getElementById("item-name").value;
+        let inventoryDescription =
+          document.getElementById("item-discript").value;
+        let inventoryAmount = document.getElementById("item-amount").value;
+        let inventoryQuantity = document.getElementById("item-quantity").value;
+
+        // Getting the data through the formData
+        let data = new FormData(inventoryForm);
+
+        // data.get("itemName");
+
+        let row = inventoryItems.insertRow();
+        // row.insertCell().innerHTML = data.get("item-name");
+        // row.insertCell().innerHTML = data.get("item-discript");
+        // row.insertCell().innerHTML = data.get("item-amount");
+        // row.insertCell().innerHTML = data.get("item-quantity");
+
+        // Iterate through each of the form element
+        for (let [key, value] of data) {
+          row.insertCell().innerHTML = data.get(key);
+        }
+
+        // console.log(data);
+        // console.log(inventoryDescription);
+        // console.log(inventoryAmount);
+        // console.log(inventoryQuantity);
+      }
+      function applyTheme() {
+        //Get the table
+
+        // Get selected theme
+        let selectedTheme = document.getElementById("themes");
+
+        if (selectedTheme.value == "Blue") {
+          inventoryItems.setAttribute("class", "blueTheme");
+        } else if (selectedTheme.value == "Red") {
+          inventoryItems.setAttribute("class", "redTheme");
+        }
+      }
+    </script>
+  </body>
+</html>
